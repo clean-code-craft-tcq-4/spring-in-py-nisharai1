@@ -27,7 +27,7 @@ class StatsAlerter:
    
 class EmailAlert:
   def __init__(self):
-    self.emailSent = False
+    self._emailSent = False
   
   @property
   def emailSent(self):
@@ -35,7 +35,7 @@ class EmailAlert:
   
 class LedAlert:
   def __init__(self):
-    self.ledGlows = False
+    self._ledGlows = False
    
   @property
   def ledGlows(self):
