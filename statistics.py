@@ -10,7 +10,7 @@ def calculateStats(numbers):
   return computedStats
 
 class StatsAlerter:
-  def __init__(self, maxThreshold, alert:list):
+  def __init__(self, maxThreshold, alerts:list):
     self.maxThreshold = maxThreshold
     self.alerts = alerts
   
