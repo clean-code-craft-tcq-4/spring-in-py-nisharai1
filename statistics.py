@@ -33,7 +33,7 @@ class EmailAlert:
   def emailSent(self):
     return True
   
-class LedAlert:
+class LEDAlert:
   def __init__(self):
     self._ledGlows = False
    
