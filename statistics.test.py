@@ -14,9 +14,9 @@ class StatsTest(unittest.TestCase):
     # All fields of computedStats (average, max, min) must be
     # nan (not-a-number), as defined in the math package
     # Design the assert here.
-    self.assertIsNan(math.isnan(computedStats["avg"]))
-    self.assertIsNan(math.isnan(computedStats["max"]))
-    self.assertIsNan(math.isnan(computedStats["min"]))
+    self.assertTrue(math.isnan(computedStats["avg"]))
+    self.assertTrue(math.isnan(computedStats["max"]))
+    self.assertTrue(math.isnan(computedStats["min"]))
     # Use nan and isnan in https://docs.python.org/3/library/math.html
 
   def test_raise_alerts_when_max_above_threshold(self):
