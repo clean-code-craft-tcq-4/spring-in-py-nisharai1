@@ -1,3 +1,42 @@
+import math
 
 def calculateStats(numbers):
-  return None
+  computedStats = {'max':math.nan, 'min': math.nan, 'avg':math.nan}
+  if numbers:
+    computedStats['max'] = max(numbers)
+    computedStats['avg'] = sum(numbers) / len(numbers)
+    computedStats['min'] = min(numbers)
+   
+  return computedStats
+
+class StatsAlerter:
+  def __init__(self, maxThreshold, alert:list):
+    self.maxThreshold = maxThreshold
+    self.alerts = alerts
+  
+  def checkAndAlert(self, numbers):
+    stats = calculateStats(numbers)
+    if stats['max'] > self.maxThreshold:
+      for alert in self.alerts:
+        if hasattr(alert,'emailSent'):
+          alert.emailSent
+        elif hasattr(alert,'ledGlows'):
+          alert.ledGlows
+        else:
+          pass
+   
+class EmailAlert:
+  def __init__(self):
+    self.emailSent = False
+  
+  @property
+  def emailSent(self):
+    return True
+  
+class LedAlert:
+  def __init__(self):
+    self.ledGlows = False
+   
+  @property
+  def ledGlows(self):
+    return True
